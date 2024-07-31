@@ -1,0 +1,119 @@
+
+body {
+    background-color: rgb(9, 9, 9);
+    color: rgb(255, 255, 255);
+    font-family: "crossorigin", Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    margin: 0, auto;
+}
+
+
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  
+  
+  .column {
+    overflow-y: scroll;
+    padding: 20px;
+    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+    @include phones {
+      padding: 5px;
+      gap:13px;
+      font-size: 10px;
+    }
+
+
+  }
+
+   article {
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.05);
+  }
+  }
+  
+
+  h3 {
+    border-radius: 5px;
+    background-color: rgb(240, 248, 255);
+    color: rgb(0, 0, 0);
+    width: 72px;
+    font-size:16px;
+  }
+
+
+
+  .icon {
+    @include artist;
+    cursor: pointer;
+    @include phones {
+      border-radius: 10px;
+      width: 25px;
+    }
+  }
+
+  
+.coldplay__column2 {
+  width: 500px;
+
+  @include laptops {
+    width: 350px;
+  }
+
+  @include tablet {
+    width: 250px;
+  }
+
+  @include phones {
+    width: 120px;
+  }
+}
+
+.songs {
+  @include artist;
+  cursor: pointer;
+
+  @include phones {
+    border-radius: 10px;
+    width: 25px;
+  }
+}
+
+
+.img__column3 {
+  width: 270px;
+  
+  @include tablet {
+    width: 170px;
+  }
+
+  @include phones {
+    width: 80px;
+  }
+} 
+  
+  .column::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  
+  .column::-webkit-scrollbar-thumb {
+    background-color: rgb(136, 136, 136);
+  }
+  
+  
+  .column::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(85, 85, 85);
+  }
+
+  

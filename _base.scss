@@ -1,0 +1,23 @@
+@function divideUnits ($value, $quantity) {
+    $result: $value / $quantity;    
+    @return $result;
+  }
+  
+  
+  @mixin laptops {
+    @media screen and (max-width: 105rem) { @content};
+  }
+  
+  @mixin tablet {
+    @media screen and (max-width: 70rem) { @content};
+  }
+  
+  @mixin phones {
+    @media screen and (max-width: 48rem) { @content};
+  }
+  
+  @mixin artist {
+      border-radius: divideUnits(40px,2);
+      background-color: rgb(0, 0, 0);
+      width: 35px;  
+  }
